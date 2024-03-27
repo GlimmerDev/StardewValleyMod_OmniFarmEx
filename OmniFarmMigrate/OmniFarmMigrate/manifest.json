@@ -1,0 +1,10 @@
+{
+  "Name": "OmnifarmEx Migrate Tool",
+  "Author": "GlimmerDev",
+  "Version": "1.0.0",
+  "Description": "Helps migrate old OmniFarm saves to OmniFarmEx.",
+  "UniqueID": "glimmerDev.OmniFarmExMigrate",
+  "EntryDll": "OmniFarmExMigrate.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

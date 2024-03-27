@@ -1,0 +1,90 @@
+{
+  "Format": "2.0.0",
+  "ConfigSchema": {
+    "UseOptionalCave": {
+      "AllowValues": "true, false",
+      "Default": false
+    },
+    "AddFarmMinecartDest": {
+      "AllowValues": "true, false",
+      "Default": true
+    }
+  },
+  "Changes": [
+    // add farm type
+    {
+      "Action": "EditData",
+      "Target": "Data/AdditionalFarms",
+      "Entries": {
+        "GlimmerDev.OmniFarmEx/OmniFarm": {
+          "ID": "GlimmerDev.OmniFarmEx/OmniFarm",
+          "TooltipStringPath": "Strings/UI:GlimmerDev_OmniFarm",
+          "MapName": "GlimmerDev_OmniFarm",
+          //"IconTexture": "Mods/GlimmerDev.OmniFarmEx/Icon",
+        }
+      }
+    },
+
+    // add farm name + description
+    {
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+        "GlimmerDev_OmniFarm": "Omni Farm_A vast farm with lots of land, spreading grass, a mine, and a source of hardwood." // tip: use {{i18n}} to translate it
+      }
+    },
+
+    // load map
+    {
+      "Action": "Load",
+      "Target": "Maps/GlimmerDev_OmniFarm",
+      "FromFile": "assets/Farm_OmniFarm.tmx"
+    },
+
+    // load cave
+    {
+      "Action": "Load",
+      "Target": "Maps/FarmCave",
+      "FromFile": "assets/FarmCave_OmniFarm.tmx",
+      "When": {
+        "FarmType": "GlimmerDev.OmniFarmEx/OmniFarm",
+        "UseOptionalCave": true
+      }
+    },
+
+    // load minecart dest
+    {
+      "Action": "EditData",
+      "Target": "Data/Minecarts",
+      "TargetField": [ "Default", "Destinations" ],
+      "Entries": {
+        "GlimmerDev.OmniFarm": {
+          "Id": "GlimmerDev.OmniFarm",
+          "DisplayName": "Farm",
+          "Condition": null,
+          "Price": 0,
+          "BuyTicketMessage": null,
+          "TargetLocation": "Farm",
+          "TargetTile": {
+            "X": 77,
+            "Y": 7
+          },
+          "TargetDirection": null,
+          "CustomFields": null
+        }
+      },
+      "When": {
+        "FarmType": "GlimmerDev.OmniFarmEx/OmniFarm",
+        "AddFarmMinecartDest": true,
+        //"Query: {{LocationName}} == 'Farm'": false
+      }
+    }
+
+    // load icon
+    //{
+    //  "Action": "Load",
+    //  "Target": "Mods/ExampleAuthor.PineappleFarm/Icon, Mods/ExampleAuthor.PineappleFarm/WorldMap",
+    //  "FromFile": "assets/{{TargetWithoutPath}}.png"
+    //},
+  ]
+}

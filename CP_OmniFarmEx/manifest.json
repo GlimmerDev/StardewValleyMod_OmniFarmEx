@@ -1,0 +1,10 @@
+﻿{
+  "Name": "[CP] OmnifarmEx",
+  "Author": "GlimmerDev",
+  "Version": "1.0.0",
+  "Description": "Combat map replacement.",
+  "UniqueID": "glimmerDev.OmnifarmEx",
+  "EntryDll": "OmniFarmEx.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "" ]
+}
