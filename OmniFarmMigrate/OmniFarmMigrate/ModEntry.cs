@@ -33,14 +33,19 @@ namespace OmniFarmMigrate
         *********/
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
         {
+            if (Game1.whichFarm != Farm.combat_layout)
+                return;
+
+            Monitor.Log("Detected Wilderness farm save. Converting...");
             List<ModFarmType> farmTypes = this.Helper.GameContent.Load<List<ModFarmType>>(@"Data/AdditionalFarms");
             for (int i = 0; i < farmTypes.Count; i++)
             {
                 if (farmTypes[i].Id == "GlimmerDev.OmniFarmEx/OmniFarm")
                 {
                     Monitor.Log("Found OmniFarmEx farm type.");
+                    //Game1.savePathOverride = Path.Combine(this.Helper.DirectoryPath, "temp_saves");
+                    Game1.whichFarm = Farm.mod_layout;
                     Game1.whichModFarm = farmTypes[i];
-                    Helper.Reflection.
                     break;
                 }
             }

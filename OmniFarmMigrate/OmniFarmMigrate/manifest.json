@@ -4,7 +4,7 @@
   "Version": "1.0.0",
   "Description": "Helps migrate old OmniFarm saves to OmniFarmEx.",
   "UniqueID": "glimmerDev.OmniFarmExMigrate",
-  "EntryDll": "OmniFarmExMigrate.dll",
+  "EntryDll": "OmniFarmMigrate.dll",
   "MinimumApiVersion": "4.0.0",
   "UpdateKeys": []
 }
