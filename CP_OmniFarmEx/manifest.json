@@ -2,9 +2,11 @@
   "Name": "[CP] OmnifarmEx",
   "Author": "GlimmerDev",
   "Version": "1.0.0",
-  "Description": "Combat map replacement.",
+  "Description": "OmniFarm ported as a content pack.",
   "UniqueID": "glimmerDev.OmnifarmEx",
-  "EntryDll": "OmniFarmEx.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": [ "" ]
+  "UpdateKeys": [ "" ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+  }
 }
