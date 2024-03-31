@@ -5,7 +5,7 @@
   "Description": "OmniFarm ported as a content pack.",
   "UniqueID": "glimmerDev.OmnifarmEx",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": [ "" ],
+  "UpdateKeys": [ "Nexus:21492", "Github:GlimmerDev/StardewValleyMod_OmniFarmEx" ],
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher",
   }

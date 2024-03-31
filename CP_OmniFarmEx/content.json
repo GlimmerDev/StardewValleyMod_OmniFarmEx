@@ -20,7 +20,7 @@
           "ID": "GlimmerDev.OmniFarmEx/OmniFarm",
           "TooltipStringPath": "Strings/UI:GlimmerDev_OmniFarm",
           "MapName": "GlimmerDev_OmniFarm",
-          //"IconTexture": "Mods/GlimmerDev.OmniFarmEx/Icon",
+          "IconTexture": "Mods/GlimmerDev.OmniFarmEx/Icon",
         }
       }
     },
@@ -76,15 +76,14 @@
       "When": {
         "FarmType": "GlimmerDev.OmniFarmEx/OmniFarm",
         "AddFarmMinecartDest": true,
-        //"Query: {{LocationName}} == 'Farm'": false
       }
-    }
+    },
 
     // load icon
-    //{
-    //  "Action": "Load",
-    //  "Target": "Mods/ExampleAuthor.PineappleFarm/Icon, Mods/ExampleAuthor.PineappleFarm/WorldMap",
-    //  "FromFile": "assets/{{TargetWithoutPath}}.png"
-    //},
+    {
+      "Action": "Load",
+      "Target": "Mods/GlimmerDev.OmniFarmEx/Icon",
+      "FromFile": "assets/GlimmerDev_OmniFarm_icon.png"
+    }
   ]
 }
