@@ -8,6 +8,7 @@
   <property name="Outdoors" value="T"/>
   <property name="SpawnMountainFarmOreRect" value="89 4 27 7"/>
   <property name="Stumps" value="7 24 0 9 26 0 13 27 0"/>
+  <property name="FarmHouseFurniture" value="1680 1 4 0 1630 1 1 0 1812 3 1 0 1811 6 1 0 1794 8 4 0 1628 1 5 0 1758 1 10 0 1678 10 1 0 1393 3 4 0 1369 3 4 0"/>
   <property name="Warp" value="88 16 BusStop 11 23 88 17 BusStop 11 24 31 119 Forest 68 0 32 119 Forest 68 0 33 119 Forest 68 0 40 -1 Backwoods 14 39 41 -1 Backwoods 14 39 34 5 FarmCave 8 11 64 1 Farm 101 1 101 0 Farm 64 2"/>
  </properties>
  <tileset firstgid="1" name="extra" tilewidth="16" tileheight="16" tilecount="64" columns="8">
